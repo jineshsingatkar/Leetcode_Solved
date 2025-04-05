@@ -3,23 +3,18 @@ public class leetcode1863 {
     int result = 0;
 
     public int subsetXORSum(int[] nums) {
-        dfs(nums, 0, 0); // start from index 0, current XOR = 0
-        return result;
-    }
-
-    // Recursive DFS function to explore all subsets
-    private void dfs(int[] nums, int index, int currentXor) {
-        if (index == nums.length) {
-            // Base case: all elements processed
-            result += currentXor;
-            return;
+        int n = nums.length;
+        int totalSubsets = 1 << n; // 2^n subsets
+        for (int i = 0; i < totalSubsets; i++) {
+            int xorSum = 0;
+            for (int j = 0; j < n; j++) {
+                if ((i & (1 << j)) != 0) { // Check if the j-th bit is set in i
+                    xorSum ^= nums[j]; // XOR the current number
+                }
+            }
+            result += xorSum; // Add the XOR sum of the current subset to the result
         }
-
-        // Include current element in subset
-        dfs(nums, index + 1, currentXor ^ nums[index]);
-
-        // Exclude current element from subset
-        dfs(nums, index + 1, currentXor);
+        return result;
     }
 }
 
