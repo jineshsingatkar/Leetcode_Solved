@@ -1,7 +1,7 @@
 /**
  * Definition for singly-linked list.
  */
-class ListNode {
+static class ListNode {
     int val;
     ListNode next;
     ListNode() {}
@@ -29,7 +29,7 @@ class ListNode {
 
 package Problems.medium;
 
-public class addTwoNumbers {
+public class AddTwoNumbersSolution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0); // Dummy node to simplify the result list creation
         ListNode current = dummyHead; // Pointer to the current node in the result list
