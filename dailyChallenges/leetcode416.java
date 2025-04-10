@@ -1,3 +1,4 @@
+package dailyChallenges;
 public class leetcode416 {
     public boolean canPartition(int[] nums) {
         int total = 0;

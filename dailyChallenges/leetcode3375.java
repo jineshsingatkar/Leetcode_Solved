@@ -1,3 +1,4 @@
+package dailyChallenges;
 public class leetcode3375 {
     public int minOperations(int[] nums, int k) {
         for (int num : nums) {

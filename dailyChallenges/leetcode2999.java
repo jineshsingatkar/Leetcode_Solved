@@ -1,3 +1,4 @@
+package dailyChallenges;
 public class leetcode2999 {
     public long numberOfPowerfulInt(long start, long finish, int limit, String s) {
         long count = 0;
