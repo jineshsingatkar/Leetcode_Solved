@@ -21,26 +21,26 @@ public class SwapTwoNo {
         arr[0] = arr[1];
         arr[1] = temp;
     }
-    public static void swap(int a, int b) {
+    public static void swapUsingTemp(int a, int b) {
         int temp = a;
         a = b;
         b = temp;
     }
-    public static void swap(int a, int b) {
+    public static void swapUsingAddition(int a, int b) {
         a = a + b; // Step 1: a now holds the sum of a and b
         b = a - b; // Step 2: b now holds the original value of a
         a = a - b; // Step 3: a now holds the original value of b
 
         System.out.println("After swap: a = " + a + ", b = " + b);
     }
-    public static void swap(int a, int b) {
+    public static void swapUsingMultiplication(int a, int b) {
         a = a * b; // Step 1: a now holds the product of a and b
         b = a / b; // Step 2: b now holds the original value of a
         a = a / b; // Step 3: a now holds the original value of b
 
         System.out.println("After swap: a = " + a + ", b = " + b);
     }
-    public static void swap(int a, int b) {
+    public static void swapUsingSubtraction(int a, int b) {
         a = a - b; // Step 1: a now holds the difference of a and b
         b = a + b; // Step 2: b now holds the original value of a
         a = b - a; // Step 3: a now holds the original value of b
