@@ -1,20 +1,31 @@
 package dailyChallenges;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class leetcode3375 {
     public int minOperations(int[] nums, int k) {
-        for (int num : nums) {
-           if (num < k) {
-               return -1; // Cannot increase values
-           }
-       }
+        // Validate input
+        if (nums == null || nums.length == 0) {
+            return -1; // Invalid input
+        }
 
-       Set<Integer> greaterThanK = new HashSet<>();
-       for (int num : nums) {
-           if (num > k) {
-               greaterThanK.add(num);
-           }
-       }
+        Set<Integer> requiredNumbers = new HashSet<>();
+        for (int i = 1; i <= k; i++) {
+            requiredNumbers.add(i);
+        }
 
-       return greaterThanK.size();
+        int operations = 0;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (requiredNumbers.contains(nums[i])) {
+                requiredNumbers.remove(nums[i]);
+            }
+            operations++;
+            if (requiredNumbers.isEmpty()) {
+                return operations;
+            }
+        }
 
-   }
+        return -1; // Not possible to achieve the condition
+    }
 }
