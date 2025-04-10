@@ -1,4 +1,4 @@
-package Problems.easy;
+// Removed package declaration to match the directory structure
 
 public class TwoSums {
     public int[] twoSum(int[] nums, int target) {
