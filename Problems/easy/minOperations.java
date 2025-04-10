@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class minOperations {
-    public int minOperations(int[] nums, int k) {
+    public int calculateMinOperations(int[] nums, int k) {
          for (int num : nums) {
             if (num < k) {
                 return -1; // Cannot increase values
