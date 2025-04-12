@@ -1,4 +1,4 @@
-package Problems.hard;
+package Problems.medium;
 
 public class implementRouter {
     private static class Packet {
