@@ -24,4 +24,16 @@ The repository is organized as follows:
 
 If you have any questions or would like to discuss any of the solutions, feel free to reach out!
 
+## letcode
+solving daily challenges to maintain daily strick 
+
+## problem solving
+creating section for each problem
+
+## easy
+
+## medium
+
+## hard
+
 
